@@ -1,0 +1,50 @@
+name:                domain-match
+version:             0.1.0.0
+github:              "an-death/domain-match"
+license:             BSD3
+author:              "as"
+maintainer:          "opiumofthepeople@yandex.ru"
+copyright:           ""
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/an-death/domain-match#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- attoparsec == 0.13.2.3
+- bytestring == 0.10.8.2
+
+library:
+  source-dirs: src
+
+executables:
+  domain-match-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - domain-match
+
+tests:
+  domain-match-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - domain-match
