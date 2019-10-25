@@ -1,6 +1,6 @@
-# Golang domain-match
+# Python domain-match
 
-Example on Python3 with benchmarks has two realization:
+Example on Python3 has two realization:
 
 - From standard Python lib `fnmatch`
 - From `fnmatch` from `glibc` bind by Cython
