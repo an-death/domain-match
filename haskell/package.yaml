@@ -23,6 +23,13 @@ dependencies:
 - base >= 4.7 && < 5
 - attoparsec == 0.13.2.3
 - bytestring == 0.10.8.2
+- Glob == 0.10.0
+- aeson == 1.4.5.0
+- iproute == 1.7.7
+- text == 1.2.3.1
+- vector
+- containers
+- criterion == 1.5.6.1
 
 library:
   source-dirs: src
@@ -32,11 +39,13 @@ executables:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
-    - -threaded
+    - -O2
     - -rtsopts
-    - -with-rtsopts=-N
+    - -optc-O3
+    - -funfolding-use-threshold=16
     dependencies:
     - domain-match
+
 
 tests:
   domain-match-test:

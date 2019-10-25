@@ -30,6 +30,7 @@ resolver: lts-14.10
 #   - wai
 packages:
 - .
+
 # Dependency packages to be pulled from upstream that are not in the resolver.
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
@@ -41,7 +42,8 @@ packages:
 #
 extra-deps:
   - bytestring-0.10.8.2
-
+  - Glob-0.10.0
+  - attoparsec-0.13.2.3
 # Override default flag values for local packages and extra-deps
 # flags: {}
 
