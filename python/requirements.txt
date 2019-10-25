@@ -1,0 +1,5 @@
+# python3
+
+Cython==0.29.13
+pytest==5.2.2
+pytest-benchmark == 3.2.2
